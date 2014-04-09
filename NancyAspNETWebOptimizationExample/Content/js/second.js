@@ -1,0 +1,1 @@
+﻿console.log('second script is active');
