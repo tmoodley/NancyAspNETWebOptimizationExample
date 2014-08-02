@@ -1,17 +1,18 @@
-﻿@{
+﻿@using System.Web.Optimization
+@{
     Layout = null;
 }
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Nancy ASP.NET Web Optimization Example</title>
-    @Html.Raw(Styles.Render("~/css").ToString())
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Nancy ASP.NET Web Optimization Example</title>
+        @Html.Raw(Styles.Render("~/css").ToHtmlString())
+    </head>
     <body>
         <div class="wrap">
             @RenderBody()
         </div>
-       @Html.Raw(Scripts.Render("~/js").ToString())
+        @Html.Raw(Scripts.Render("~/js").ToHtmlString())
     </body>
 </html>
